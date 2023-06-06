@@ -1,0 +1,18 @@
+Private Sub Button1_Click(sender As Object, e As EventArgs)
+Handle(Button1_Click)
+Dim sum As Integer
+Dim a As Integer
+Dim b As Integer
+
+Label4.Visible = True
+If TextBox1.Text = ""
+Label4.Visible = False
+MessageBox.Show("Lo siento, este cuadro no puede estar en blanco.")
+TextBox1.Focus()
+End If
+
+a = Val(TextBox1.Text)
+b = Val(TextBox2.Text)
+sum = (a + b)
+Label4.Text = "La suma de" & a & " y " & b & " es " & sum & "."
+
